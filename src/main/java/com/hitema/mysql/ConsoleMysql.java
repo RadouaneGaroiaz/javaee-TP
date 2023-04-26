@@ -54,14 +54,14 @@ public class ConsoleMysql {
         //affichage des villes
         cityDao.getAllCityies().forEach(System.out::println);
 
-        //ajout d'une ville
-        City city1 = new City("Berkane", LocalDateTime.now());
-        cityDao.createCity(city1);
-        System.out.println("City created : " + city1);
-
         //get city by id
         cityDao.getCityById(1L);
         System.out.println("City with id 1 : " + cityDao.getCityById(1L));
+
+        //ajout d'une ville
+        City city1 = new City("Agadir", LocalDateTime.now());
+        cityDao.createCity(city1);
+        System.out.println("City created : " + city1);
 
         //update city
         City city2 = new City("Berkane2", LocalDateTime.now());

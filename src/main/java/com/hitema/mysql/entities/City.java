@@ -15,11 +15,13 @@ public class City {
 
     private String city;
 
+
     public City() {
     }
 
     @Column(name = "last_update")
     private LocalDateTime lastUpdate;
+
 
     public City(String city, LocalDateTime lastUpdate) {
         this.city = city;
