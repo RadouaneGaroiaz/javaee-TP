@@ -15,9 +15,6 @@ public class Country {
 
     private String country;
 
-    public Country() {
-    }
-
     public Country(String country, LocalDateTime lastUpdate) {
         this.country = country;
         this.lastUpdate = lastUpdate;
@@ -26,6 +23,9 @@ public class Country {
     @Column(name = "last_update")
     private LocalDateTime lastUpdate;
 
+    public Country() {
+
+    }
 
 
     public Long getId() {

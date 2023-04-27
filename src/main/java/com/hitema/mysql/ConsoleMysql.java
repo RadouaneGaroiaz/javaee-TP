@@ -34,7 +34,7 @@ public class ConsoleMysql {
         countryDao.getAllCountries().forEach(System.out::println);
 
         //ajout d'un pays
-        Country country2 = new Country("Maroc2", LocalDateTime.now());
+        Country country2 = new Country("Maroc4", LocalDateTime.now());
         countryDao.createCountry(country2);
         System.out.println("Country created : " + country2);
 
@@ -47,9 +47,9 @@ public class ConsoleMysql {
         countryDao.updateCountry(country2);
         System.out.println("Country updated : " + country2);
 
-        //delete country
+     /*   //delete country
         countryDao.deleteCountry(country2);
-        System.out.println("Country deleted : " + country2);
+        System.out.println("Country deleted : " + country2);*/
 
         //affichage des villes
         cityDao.getAllCityies().forEach(System.out::println);
@@ -60,18 +60,21 @@ public class ConsoleMysql {
 
         //ajout d'une ville
         City city1 = new City("Agadir", LocalDateTime.now());
+        Country country0 = countryDao.getCountryById(1L);
+        city1.setCountry(country0);
         cityDao.createCity(city1);
         System.out.println("City created : " + city1);
 
         //update city
         City city2 = new City("Berkane2", LocalDateTime.now());
-        city2.setId(1L);
+        Country country1 = countryDao.getCountryById(4L);
+        //city2.setId(1L);
         cityDao.updateCity(city2);
         System.out.println("City updated : " + city2);
 
-        //delete city
+     /*   //delete city
         cityDao.deleteCity(city2);
-        System.out.println("City deleted : " + city2);
+        System.out.println("City deleted : " + city2);*/
 
 
 
