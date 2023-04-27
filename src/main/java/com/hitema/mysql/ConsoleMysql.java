@@ -47,9 +47,7 @@ public class ConsoleMysql {
         countryDao.updateCountry(country2);
         System.out.println("Country updated : " + country2);
 
-     /*   //delete country
-        countryDao.deleteCountry(country2);
-        System.out.println("Country deleted : " + country2);*/
+
 
         //affichage des villes
         cityDao.getAllCityies().forEach(System.out::println);
@@ -72,10 +70,13 @@ public class ConsoleMysql {
         cityDao.updateCity(city2);
         System.out.println("City updated : " + city2);
 
-     /*   //delete city
+        //delete city
         cityDao.deleteCity(city2);
-        System.out.println("City deleted : " + city2);*/
+        System.out.println("City deleted : " + city2);
 
+        //delete country
+        countryDao.deleteCountry(country2);
+        System.out.println("Country deleted : " + country2);
 
 
         System.out.println("<<<<<End   Console MySql>>>>>");
